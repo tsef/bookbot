@@ -9,7 +9,10 @@ def get_book_text(path):
 
 
 def main():
-    pretty_print_stats("./books/frankenstein.txt")
+    pretty_print_stats(sys.argv[1])
 
 if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
     main()
