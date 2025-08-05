@@ -1,5 +1,5 @@
-from stats import count_words
-
+from stats import *
+import sys
 
 def get_book_text(path):
     with open(path) as f:
@@ -9,9 +9,7 @@ def get_book_text(path):
 
 
 def main():
-    file_content = get_book_text("./books/frankenstein.txt")
-    number_of_words = count_words(file_content)
-    print(f"{number_of_words} words found in the document")
+    pretty_print_stats("./books/frankenstein.txt")
 
 if __name__ == "__main__":
     main()
